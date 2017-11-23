@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+.nav {
+  background-color: map-get($colors, darker);
+  color: white;
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  @include media-breakpoint-between(sm, lg) {
+    height: 50px;
+  }
+  @include media-breakpoint-down(xs) {
+    height: 40px;
+  }
+}
+
+.nav__links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -overflow-scrolling: touch;
+  height: 100%;
+  width: 60%;
+  @include media-breakpoint-down(xs) {
+    width: auto;
+  }
+  @include media-breakpoint-down(sm) {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+  }
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  transition: color .4s ease-out;
+  font-weight: 300;
+  font-size: 1.2rem; 
+  padding-left: 20px;
+  padding-right: 20px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+    background-color: map-get($colors, lighter);
+    color: white;
+  }
+  @include media-breakpoint-up(xl) {
+    &:hover:not(:focus) {
+      color: map-get($colors, brand);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 1rem; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.nav__link--active {
+  color: map-get($colors, brand);
+  border-bottom: 3px solid #cf45b8;
+  @include media-breakpoint-down(sm) {
+    border-bottom: none;
+  }
+}

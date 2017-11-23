@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: map-get($grid-breakpoints, xl);
+  @include media-breakpoint-up(sm) {
+    width: 90%;
+  }
+}

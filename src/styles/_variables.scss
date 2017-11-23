@@ -1,0 +1,28 @@
+// Based on Bootstrap 4
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 780px,
+  lg: 980px,
+  xl: 1280px
+) !default;
+
+$colors: (
+  lighter:      #40373f, // light blue
+  dark:         #342830, // dark blue
+  darker:       #2a2028, // really dark blue
+  brand:        #fb61e6, // electric blue
+  brandLight:   #fdbbf2,
+  text:         #1a1a1a, // very dark grey / black substitute
+  subtle:       #6d6d6d, // light grey for text
+  subtleOnDark: #999,
+  divider:      #ececec, // very light grey
+  note:         #ffe564, // yellow
+  error:        #ff6464, // yellow
+) !default;
