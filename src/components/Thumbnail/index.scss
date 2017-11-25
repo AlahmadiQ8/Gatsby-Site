@@ -53,6 +53,11 @@ $spin-duration: 120s;
   top: 0;
   border-radius: 50%;
   animation: spin $spin-duration linear infinite forwards;
+  @include media-breakpoint-down(md) {
+    left: $thumbnail-size-md / 2 - $thumbnail-size-md / 2;
+    width: $thumbnail-size-md;
+    height: $thumbnail-size-md;
+  }
   @include media-breakpoint-down(sm) {
     left: $thumbnail-size-sm / 2 - $thumbnail-size-sm / 2;
     width: $thumbnail-size-sm;

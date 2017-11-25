@@ -4,27 +4,50 @@ class IconsContainer extends Component {
   constructor(props) {
     super(props);
     this.icons = [];
+    this.animateIcons = this.animateIcons.bind(this);
+    this.calculateDimensions = this.calculateDimensions.bind(this);
+    this.positionIcon = this.positionIcon.bind(this);
     this.pauseAnimation = this.pauseAnimation.bind(this);
     this.resumeAnimation = this.resumeAnimation.bind(this);
+
+    this.width = 0;
+    this.height = 0;
+    this.step = 0;
+    this.radius = 0;
+    this.angle = 0;
   }
 
   componentDidMount() {
-    const width = this.container.clientWidth;
-    const height = this.container.clientHeight;
-    const step = 2 * Math.PI / this.icons.length;
-    const radius = width / 2 * (1 + 0.3);
-    let angle = 0;
+    this.animateIcons();
+    window.addEventListener('resize', this.animateIcons);
+  }
 
-    this.icons.forEach(icon => {
-      const x = Math.round(
-        width / 2 + radius * Math.cos(angle) - icon.clientWidth / 2
-      );
-      const y = Math.round(
-        height / 2 + radius * Math.sin(angle) - icon.clientHeight / 2
-      );
-      icon.style.cssText = `left: ${x}px; top: ${y}px;`;
-      angle += step;
-    });
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.animateIcons);
+  }
+
+  animateIcons() {
+    this.calculateDimensions();
+    this.icons.forEach(this.positionIcon);
+  }
+
+  calculateDimensions() {
+    this.width = this.container.clientWidth;
+    this.height = this.container.clientHeight;
+    this.step = 2 * Math.PI / this.icons.length;
+    this.radius = this.width / 2 * (1 + 0.3);
+    this.angle = 0;
+  }
+
+  positionIcon(icon) {
+    const x = Math.round(
+      this.width / 2 + this.radius * Math.cos(this.angle) - icon.clientWidth / 2
+    );
+    const y = Math.round(
+      this.height / 2 + this.radius * Math.sin(this.angle) - icon.clientHeight / 2
+    );
+    icon.style.cssText = `left: ${x}px; top: ${y}px;`;
+    this.angle += this.step;
   }
 
   pauseAnimation() {
