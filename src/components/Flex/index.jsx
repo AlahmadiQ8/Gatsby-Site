@@ -15,7 +15,10 @@ const Flex = ({
     alignItems: direction === 'row' ? valign : halign,
   };
   return (
-    <div className={`flex ${className}`} style={className ? {} : styles}>
+    <div
+      className={`flex ${className}`}
+      style={className.match(/flex/) ? {} : styles}
+    >
       {children}
     </div>
   );

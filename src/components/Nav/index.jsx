@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import NavLink from './NavLink';
+import SocialLinks from './SocialLinks';
 import Container from '../Container';
 import './index.scss';
 
@@ -15,6 +15,7 @@ const Nav = ({ location }) => (
           <NavLink isActive={location.pathname.includes('/work')} title="Work" to="/work" />
           <NavLink isActive={location.pathname.includes('/blog')} title="Blog" to="/blog" />
         </div>
+        <SocialLinks />
       </div>
     </Container>
   </div>
