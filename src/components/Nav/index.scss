@@ -88,16 +88,16 @@
     padding-left: 20px;
     padding-right: 20px;
     &:hover:not(:focus) {
-      color: map-get($colors, brand);
+      color: map-get($colors, brandLight);
     }
   }
 }
 
 .nav__link--active {
-  color: map-get($colors, brand);
+  color: map-get($colors, brandLight);
   border-bottom: none;
   @include media-breakpoint-up(md) {
-    border-bottom: 3px solid map-get($colors, brand);
+    border-bottom: 3px solid map-get($colors, brandLight);
   }
 }
 
@@ -111,7 +111,7 @@
   background-color: map-get($colors, darker);
   fill: white;
   &:hover {
-    fill: map-get($colors, brand);
+    fill: map-get($colors, brandLight);
     transform: scale(1.25);
     transition: transform .25s, fill .25s;
   }
