@@ -7,6 +7,13 @@
   background-image: url('./pattern-3.png');
   background-repeat: repeat;
   color: white;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 60px;
+  }
 }
 
 .banner__content-wrapper {

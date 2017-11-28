@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+$gutter:   25px;
+
+// two thirds of xl width
+$first-section-width: map-get($grid-breakpoints, xl) * .7;
+
+// first sectoin col widths
+$col-width-1: $first-section-width * 0.4;
+$col-width-2: $first-section-width - $col-width-1;
+
+.page-index__h1 {
+  color: map-get($colors, brand);
+  font-size: 2.5rem;
+  // font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.page-index__col {
+  margin-left: $gutter;
+  margin-right: $gutter;
+
+  &:first-of-type {
+    width: $col-width-1;
+    margin-left: 0;
+  }
+  &:last-of-type {
+    width: $col-width-2;
+    margin-right: 0;
+  }
+}
+
+.page-index__first-section {
+  width: $first-section-width; 
+}
+
+.entry {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid map-get($grays, "300");
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.entry__h2 {
+  font-size: 1.2rem;
+  margin-bottom: .1rem;
+  color: map-get($grays, "800");
+  transition: color .4s ease-out;
+  &:hover {
+    color: map-get($colors, brandLight);
+  }
+}
+
+.entry__p {
+  margin-bottom: 0;
+}
+
+.entry__img {
+  border-radius: 20%;
+  margin-right: 30px;
+}
+
