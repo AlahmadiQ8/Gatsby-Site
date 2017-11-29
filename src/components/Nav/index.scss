@@ -93,6 +93,15 @@
   }
 }
 
+.nav__link--no-focus {
+  &:focus {
+    background-color: map-get($colors, darker);
+  }
+  &:hover:not(:focus) {
+    color: map-get($colors, brandLight);
+  }
+}
+
 .nav__link--active {
   color: map-get($colors, brandLight);
   border-bottom: none;

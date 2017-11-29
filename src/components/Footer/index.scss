@@ -4,7 +4,16 @@
 .footer {
   line-height: 1.15;
   color: white;
-
+  padding-top: 15px;
+  padding-bottom: 15px; 
+  @include media-breakpoint-up(md) {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   &:first-of-type {
     margin-top: 20px;
     @include media-breakpoint-up(md) {
@@ -17,25 +26,20 @@
 }
 
 .footer--light {
-  background-color: map-get($colors, lighter);
+  background-color: map-get($colors, darker);
 }
 .footer--dark {
-  background-color: map-get($colors, lighter);
+  background-color: map-get($colors, darker);
 }
 
 .footer__content-wrapper {
+  background-color: map-get($colors, dark);
+  max-width: 400px;
+  max-height: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 10px; 
-  @include media-breakpoint-up(md) {
-    padding-top: 20px;
-    padding-bottom: 20px; 
-  }
-  @include media-breakpoint-up(xl) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer__links {
@@ -94,7 +98,7 @@
   height: 30px;
   line-height: 30px;
   border-radius: 50%;
-  background-color: map-get($colors, lighter);
+  background-color: map-get($colors, dark);
   fill: map-get($grays, "500");
   transition: transform .25s, fill .25s;
   &:hover {
