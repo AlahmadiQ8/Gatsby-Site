@@ -12,22 +12,43 @@ $col-width-2: $first-section-width - $col-width-1;
 
 .page-index__h1 {
   color: map-get($colors, brand);
-  font-size: 2.5rem;
-  // font-weight: 400;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid map-get($colors, brandLighter);
+}
+
+.page-index__flex {
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
 }
 
 .page-index__col {
-  margin-left: $gutter;
-  margin-right: $gutter;
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
 
   &:first-of-type {
-    width: $col-width-1;
+    width: 100%;
     margin-left: 0;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      width: $col-width-1;
+    }
   }
   &:last-of-type {
-    width: $col-width-2;
     margin-right: 0;
+    @include media-breakpoint-up(md) {
+      width: $col-width-2;
+    }
   }
 }
 
@@ -47,10 +68,12 @@ $col-width-2: $first-section-width - $col-width-1;
 .entry__h2 {
   font-size: 1.2rem;
   margin-bottom: .1rem;
-  color: map-get($grays, "800");
-  transition: color .4s ease-out;
+  color: map-get($colors, brandLight);
+  transition: color .25s ease-out;
+  text-decoration: none;
   &:hover {
-    color: map-get($colors, brandLight);
+    text-decoration: none;
+    color: map-get($colors, brand);
   }
 }
 

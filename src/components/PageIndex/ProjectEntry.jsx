@@ -1,20 +1,26 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import Flex from '../Flex';
 
-const ProjectEntry = ({ imgURl, alt }) => {
+const ProjectEntry = ({ title, desc, imgURl, alt }) => {
   const img = <img className="entry__img" src={imgURl} alt={alt} />;
   return (
     <div className="entry">
       <Flex valign="center">
         {imgURl ? img : null}
         <div>
-          <h2 className="entry__h2">Connect 4</h2>
-          <p className="entry__p">Now go build something great.</p>
+          <Link to="#"><h2 className="entry__h2">{title}</h2></Link>
+          <p className="entry__p">{desc}</p>
         </div>
       </Flex>
     </div>
   );
 };
-// style={{ borderRadius: '20%', marginRight: '30px' }}
+
+ProjectEntry.defaultProps = {
+  title: 'Test Entry',
+  desc: 'This is only a test entry. It should not be viewable on production.'
+}
+
 export default ProjectEntry;

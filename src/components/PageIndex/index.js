@@ -12,13 +12,11 @@ const PageIndex = () => {
   return (
     <div className="page-index">
       <Container>
-        <Flex halign="space-between">
-          <Flex className="page-index__first-section">
+        <Flex halign="space-between ">
+          <Flex className="page-index__first-section page-index__flex">
             <div className="page-index__col">
               <h1 className="page-index__h1">Blog Posts</h1>
               <div>
-                <ProjectEntry />
-                <ProjectEntry />
                 <ProjectEntry />
                 <ProjectEntry />
                 <ProjectEntry />
@@ -35,9 +33,9 @@ const PageIndex = () => {
               </div>
             </div>
           </Flex>
-          <div>
+          {/* <div>
             <h1>CUTE</h1>
-          </div>
+          </div> */}
         </Flex>
       </Container>
     </div>

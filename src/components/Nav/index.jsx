@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavLink from './NavLink';
-import SocialLinks from './SocialLinks';
+import SocialLinks from '../SocialLinks';
 import Container from '../Container';
 import './index.scss';
 
@@ -15,7 +15,7 @@ const Nav = ({ location }) => (
           <NavLink isActive={location.pathname.includes('/work')} title="Work" to="/work" />
           <NavLink isActive={location.pathname.includes('/blog')} title="Blog" to="/blog" />
         </div>
-        <SocialLinks />
+        <SocialLinks className="nav__social-link" />
       </div>
     </Container>
   </div>

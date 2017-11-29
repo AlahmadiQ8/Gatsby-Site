@@ -14,11 +14,13 @@ $grid-breakpoints: (
 ) !default;
 
 $colors: (
-  lighter:      #40373f, // light blue
+  lighter:      #462C3F, // light blue
   dark:         #342830, // dark blue
   darker:       #2a2028, // really dark blue
   brand:        #7F2144, // electric blue
   brandLight:   #dc779c,
+  brandLighter: #f1c8d7,
+
   text:         #1a1a1a, // very dark grey / black substitute
   subtle:       #6d6d6d, // light grey for text
   subtleOnDark: #999,

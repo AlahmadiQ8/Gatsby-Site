@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+.footer {
+  line-height: 1.15;
+  color: white;
+
+  &:first-of-type {
+    margin-top: 20px;
+    @include media-breakpoint-up(md) {
+      margin-top: 40px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.footer--light {
+  background-color: map-get($colors, lighter);
+}
+.footer--dark {
+  background-color: map-get($colors, lighter);
+}
+
+.footer__content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 10px; 
+  @include media-breakpoint-up(md) {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: map-get($grays, "500");
+  transition: color .4s ease-out;
+  font-weight: 300;
+  
+  font-size: 1rem;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+    // background-color: map-get($colors, lighter);
+    color: map-get($grays, "500");
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1rem; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover:not(:focus) {
+      color: white;
+    }
+  }
+}
+
+.footer__row {
+  margin-bottom: 15px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__social-links {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: map-get($colors, lighter);
+  fill: map-get($grays, "500");
+  transition: transform .25s, fill .25s;
+  &:hover {
+    fill: white;
+    transform: scale(1.25); 
+  }
+}
+
+.footer__hr {
+  border-color: map-get($colors, darker);
+}

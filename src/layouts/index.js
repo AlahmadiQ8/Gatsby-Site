@@ -2,11 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import 'styles/bootstrap-reboot.css';
+import 'styles/base.scss';
 
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 const TemplateWrapper = ({ children, location }) => (
-  <div>
+  <div className="root">
     <Helmet
       title="Gatsby Default Starter"
       meta={[
@@ -14,8 +16,11 @@ const TemplateWrapper = ({ children, location }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Nav location={location} />
-    {children()}
+    <div className="root__body">
+      <Nav location={location} />
+      {children()}
+    </div>
+    <Footer />
   </div>
 );
 
