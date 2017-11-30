@@ -1,2 +1,2 @@
-webpackJsonp([0xefeaa6d1881d],{193:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=u(2),d=n(a),l=function(){return d.default.createElement("div",null)};t.default=l,e.exports=t.default}});
+webpackJsonp([0xefeaa6d1881d],{194:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=u(2),d=n(a),l=function(){return d.default.createElement("div",null)};t.default=l,e.exports=t.default}});
 //# sourceMappingURL=component---src-pages-about-js-889987c2f6db9c476fac.js.map
