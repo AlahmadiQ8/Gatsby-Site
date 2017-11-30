@@ -12,8 +12,16 @@ const PageIndex = () => {
   return (
     <div className="page-index">
       <Container>
-        <Flex halign="space-between ">
-          <Flex className="page-index__first-section page-index__flex">
+        <Flex halign="center">
+          <Flex className="page-index__flex">
+            <div className="page-index__col">
+              <h1 className="page-index__h1">Work</h1>
+              <div>
+                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
+                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
+                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
+              </div>
+            </div>
             <div className="page-index__col">
               <h1 className="page-index__h1">Blog Posts</h1>
               <div>
@@ -23,19 +31,7 @@ const PageIndex = () => {
                 <ProjectEntry />
               </div>
             </div>
-            <div className="page-index__col">
-              <h1 className="page-index__h1">Work</h1>
-              <div>
-                <ProjectEntry imgURl="http://via.placeholder.com/75x75" />
-                <ProjectEntry imgURl="http://via.placeholder.com/75x75" />
-                <ProjectEntry imgURl="http://via.placeholder.com/75x75" />
-                <ProjectEntry imgURl="http://via.placeholder.com/75x75" />
-              </div>
-            </div>
           </Flex>
-          {/* <div>
-            <h1>CUTE</h1>
-          </div> */}
         </Flex>
       </Container>
     </div>

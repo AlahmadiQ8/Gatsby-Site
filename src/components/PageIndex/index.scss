@@ -3,17 +3,15 @@
 
 $gutter:   25px;
 
-// two thirds of xl width
-$first-section-width: map-get($grid-breakpoints, xl) * .7;
+$width: map-get($grid-breakpoints, xl);
 
-// first sectoin col widths
-$col-width-1: $first-section-width * 0.4;
-$col-width-2: $first-section-width - $col-width-1;
+$col-width-1: $width * 0.35;
+$col-width-2: $width - $col-width-1;
 
 .page-index__h1 {
   color: map-get($colors, brand);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid map-get($colors, brandLighter);
@@ -41,24 +39,23 @@ $col-width-2: $first-section-width - $col-width-1;
     margin-bottom: 20px;
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
-      width: $col-width-1;
+      max-width: $col-width-2;
     }
   }
   &:last-of-type {
     margin-right: 0;
     @include media-breakpoint-up(md) {
-      width: $col-width-2;
+      max-width: $col-width-1;
     }
   }
-}
-
-.page-index__first-section {
-  width: $first-section-width; 
 }
 
 .entry {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.entry--border-bottom { 
   border-bottom: 1px solid map-get($grays, "300");
   &:last-of-type {
     border-bottom: none;
@@ -66,7 +63,7 @@ $col-width-2: $first-section-width - $col-width-1;
 }
 
 .entry__h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: .1rem;
   color: map-get($colors, brandLight);
   transition: color .25s ease-out;
@@ -75,10 +72,17 @@ $col-width-2: $first-section-width - $col-width-1;
     text-decoration: none;
     color: map-get($colors, brand);
   }
+  @include media-breakpoint-up(md) {
+    font-size: 1.2rem;
+  }
 }
 
 .entry__p {
   margin-bottom: 0;
+  font-size: .9rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
 }
 
 .entry__img {

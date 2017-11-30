@@ -1,12 +1,17 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import cx from 'classnames';
 
 import Flex from '../Flex';
 
 const ProjectEntry = ({ title, desc, imgURl, alt }) => {
   const img = <img className="entry__img" src={imgURl} alt={alt} />;
+  const className = cx(
+    'entry',
+    { 'entry--border-bottom': !imgURl }
+  );
   return (
-    <div className="entry">
+    <div className={className}>
       <Flex valign="center">
         {imgURl ? img : null}
         <div>
