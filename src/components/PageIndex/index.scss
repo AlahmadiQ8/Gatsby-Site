@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+$gutter:   25px;
+
+// two thirds of xl width
+$first-section-width: map-get($grid-breakpoints, xl) * .7;
+
+// first sectoin col widths
+$col-width-1: $first-section-width * 0.4;
+$col-width-2: $first-section-width - $col-width-1;
+
+.page-index__h1 {
+  color: map-get($colors, brand);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid map-get($colors, brandLighter);
+}
+
+.page-index__flex {
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+.page-index__col {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
+
+  &:first-of-type {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      width: $col-width-1;
+    }
+  }
+  &:last-of-type {
+    margin-right: 0;
+    @include media-breakpoint-up(md) {
+      width: $col-width-2;
+    }
+  }
+}
+
+.page-index__first-section {
+  width: $first-section-width; 
+}
+
+.entry {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid map-get($grays, "300");
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.entry__h2 {
+  font-size: 1.2rem;
+  margin-bottom: .1rem;
+  color: map-get($colors, brandLight);
+  transition: color .25s ease-out;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: map-get($colors, brand);
+  }
+}
+
+.entry__p {
+  margin-bottom: 0;
+}
+
+.entry__img {
+  border-radius: 20%;
+  margin-right: 30px;
+}
+

@@ -10,19 +10,33 @@ $grid-breakpoints: (
   sm: 600px,
   md: 780px,
   lg: 980px,
-  xl: 1280px
+  xl: 1200px
 ) !default;
 
 $colors: (
-  lighter:      #40373f, // light blue
+  lighter:      #463241, // light blue
   dark:         #342830, // dark blue
   darker:       #2a2028, // really dark blue
-  brand:        #fb61e6, // electric blue
-  brandLight:   #fdbbf2,
+  brand:        #7F2144, // electric blue
+  brandLight:   #dc779c,
+  brandLighter: #f1c8d7,
+
   text:         #1a1a1a, // very dark grey / black substitute
   subtle:       #6d6d6d, // light grey for text
   subtleOnDark: #999,
   divider:      #ececec, // very light grey
   note:         #ffe564, // yellow
   error:        #ff6464, // yellow
+) !default;
+
+$grays: (
+  "100": #f8f9fa,
+  "200": #e9ecef,
+  "300": #dee2e6,
+  "400": #ced4da,
+  "500": #adb5bd,
+  "600": #868e96,
+  "700": #495057,
+  "800": #343a40,
+  "900": #212529
 ) !default;

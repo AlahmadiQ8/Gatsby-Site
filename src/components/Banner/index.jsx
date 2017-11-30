@@ -11,7 +11,10 @@ const Banner = props => (
     <header className="banner__content-wrapper">
       <Container>
         <Flex halign="space-around" className="banner__flex">
-          <Flex direction="column" valign="center" className="banner__col">
+          <div className="banner__section">
+            <Thumbnail />
+          </div>
+          <div className="banner__section">
             <h1 className="banner__h1">Mohammad Alahmadi</h1>
             <p className="banner__p">
               I’m a front end developer living in Santa Barbara. I am passionate 
@@ -19,9 +22,6 @@ const Banner = props => (
               I love building websites, SPAs, and fiddling with open source 
               projects. 
             </p>
-          </Flex>
-          <div className="banner__col banner__col--first">
-            <Thumbnail />
           </div>
         </Flex>
       </Container>

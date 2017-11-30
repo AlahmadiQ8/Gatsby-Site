@@ -1,88 +1,36 @@
 @import '../../styles/variables';
 @import '../../styles/mixins/breakpoints';
 
-$thumbnail-size: 250px;
-$thumbnail-size-md: 200px;
-$thumbnail-size-sm: 150px;
-$icon-size: 40px;
-$spin-duration: 120s;
+$thumbnail-size:     150px;
+$thumbnail-size-md:  200px;
+$thumbnail-size-xl:  250px;
+
+
 
 .thumbnail {
   text-align: center;
   position: relative;
   width: $thumbnail-size;
   height: $thumbnail-size;
-  @include media-breakpoint-down(md) {
+  margin-bottom: 10px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
     width: $thumbnail-size-md;
     height: $thumbnail-size-md;
   }
-  @include media-breakpoint-down(sm) {
-    margin-bottom: $icon-size;
-    width: $thumbnail-size-sm;
-    height: $thumbnail-size-sm;
+  @include media-breakpoint-up(xl) {
+    width: $thumbnail-size-xl;
+    height: $thumbnail-size-xl;
   }
 }
+
 
 .thumbnail__img {
-  // box-shadow: 0px 0px 30px 0px map-get($colors, brand );
-  width: $thumbnail-size;
-  height: $thumbnail-size;
+  box-shadow: 0px 0px 30px 0px map-get($colors, brand );
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  position: absolute; 
-  left: $thumbnail-size/2 - $thumbnail-size / 2;
-  border:2px solid map-get($colors, brand); 
+  border:2px solid map-get($colors, brandLight); 
   padding:4px; 
-  background: white;
-  @include media-breakpoint-down(md) {
-    left: $thumbnail-size-md / 2 - $thumbnail-size-md / 2;
-    width: $thumbnail-size-md;
-    height: $thumbnail-size-md;
-  }
-  @include media-breakpoint-down(sm) {
-    left: $thumbnail-size-sm / 2 - $thumbnail-size-sm / 2;
-    width: $thumbnail-size-sm;
-    height: $thumbnail-size-sm;
-  }
-}
-
-.thumbnail__icons-container {
-  width: $thumbnail-size;
-  height: $thumbnail-size;
-  position: absolute; 
-  left: $thumbnail-size/2 - $thumbnail-size / 2;
-  top: 0;
-  border-radius: 50%;
-  animation: spin $spin-duration linear infinite forwards;
-  @include media-breakpoint-down(md) {
-    left: $thumbnail-size-md / 2 - $thumbnail-size-md / 2;
-    width: $thumbnail-size-md;
-    height: $thumbnail-size-md;
-  }
-  @include media-breakpoint-down(sm) {
-    left: $thumbnail-size-sm / 2 - $thumbnail-size-sm / 2;
-    width: $thumbnail-size-sm;
-    height: $thumbnail-size-sm;
-  }
-}
-
-.thumbnail__icon {
-  position: absolute;
-  text-align: center;
-  width: $icon-size;
-  height: $icon-size;
-  line-height: $icon-size;
-  border-radius: 50%;
-  fill: map-get($colors, brand);
-  background-color: map-get($colors, lighter);
-  animation: spin $spin-duration linear infinite reverse;
-}
-
-.js-pause-animation {
-  animation-play-state: paused;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
-  }
+  // background: map-get($colors, brand);
 }
