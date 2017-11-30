@@ -1,4 +1,6 @@
 
+@import './variables';
+
 .root {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,11 @@
 
 .root__body {
   flex: 1;
+}
+
+::selection { 
+  background: map-get($colors, brandLight); 
+  color: white;
 }
 
 a {

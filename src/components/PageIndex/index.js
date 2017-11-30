@@ -23,7 +23,7 @@ const PageIndex = () => {
               </div>
             </div>
             <div className="page-index__col">
-              <h1 className="page-index__h1">Blog Posts</h1>
+              <h1 className="page-index__h1">Latest Posts</h1>
               <div>
                 <ProjectEntry />
                 <ProjectEntry />
