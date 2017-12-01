@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+.logo-svg {
+  transition: transform 0.2s ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover .logo-svg__triangles {
+    fill-opacity: 1;
+    path:not(:first-of-type) {
+      stroke: map-get($colors, darker);
+    }
+  }
+
+  &:hover .logo-svg__circles {
+    fill: none;
+  }
+}
+
+.logo-svg__triangles {
+  transition: fill-opacity 0.2s ease-out, stroke 0.2s ease-out;
+  fill: map-get($colors, brandLight);
+  fill-opacity: 0;
+  
+  path:not(:first-of-type) {
+    stroke: white;
+  }
+}
+
+.logo-svg__circles {
+  fill: white;
+  transition: fill 0.2s ease-out;
+}

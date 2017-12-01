@@ -18,7 +18,9 @@ const TemplateWrapper = ({ children, location }) => (
     />
     <div className="root__body">
       <Nav location={location} />
-      {children()}
+      <div className="nav__margin">
+        {children()}
+      </div>
     </div>
     <Footer />
   </div>

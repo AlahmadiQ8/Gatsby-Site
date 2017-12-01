@@ -25,15 +25,20 @@ const PageIndex = () => {
             <div className="page-index__col">
               <h1 className="page-index__h1">Latest Posts</h1>
               <div>
-                <ProjectEntry />
-                <ProjectEntry />
-                <ProjectEntry />
-                <ProjectEntry />
+                <ProjectEntry small />
+                <ProjectEntry small />
+                <ProjectEntry small />
+                <ProjectEntry small />
               </div>
             </div>
           </Flex>
         </Flex>
       </Container>
+      <div className="page-index__bottom-banner">
+        <Container className="page-index__bottom-banner">
+          <p>I am currently available to take in projects.</p>
+        </Container>
+      </div>
     </div>
   );
 };

@@ -77,6 +77,11 @@ $col-width-2: $width - $col-width-1;
   }
 }
 
+.entry__h2--small {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .entry__p {
   margin-bottom: 0;
   font-size: .9rem;
@@ -90,3 +95,19 @@ $col-width-2: $width - $col-width-1;
   margin-right: 30px;
 }
 
+.page-index__bottom-banner {
+  background-color: map-get($colors, lighter);
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: 20px;
+  @include media-breakpoint-up(md) {
+    margin-top: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 60px;
+  }
+}
