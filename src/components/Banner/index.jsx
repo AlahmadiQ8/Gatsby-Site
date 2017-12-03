@@ -6,7 +6,7 @@ import Flex from '../Flex';
 
 import Thumbnail from '../Thumbnail';
 
-const Banner = props => (
+const Banner = () => (
   <div className="banner">
     <header className="banner__content-wrapper">
       <Container>
@@ -17,10 +17,8 @@ const Banner = props => (
           <div className="banner__section">
             <h1 className="banner__h1">Mohammad Alahmadi</h1>
             <p className="banner__p">
-              I’m a front end developer living in Santa Barbara. I am passionate 
-              about front end UI design, architecture, and web technologies. 
-              I love building websites, SPAs, and fiddling with open source 
-              projects. 
+            I’m a front end engineer living in Santa Barbara. I enjoy building
+            stuff with Javascript and React.
             </p>
           </div>
         </Flex>

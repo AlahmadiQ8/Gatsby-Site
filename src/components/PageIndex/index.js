@@ -34,11 +34,6 @@ const PageIndex = () => {
           </Flex>
         </Flex>
       </Container>
-      <div className="page-index__bottom-banner">
-        <Container className="page-index__bottom-banner">
-          <p>I am currently available to take in projects.</p>
-        </Container>
-      </div>
     </div>
   );
 };
