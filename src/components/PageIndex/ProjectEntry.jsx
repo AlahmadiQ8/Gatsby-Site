@@ -4,22 +4,26 @@ import cx from 'classnames';
 
 import Flex from '../Flex';
 
-const ProjectEntry = ({ title, desc, imgURl, alt, small }) => {
+const ProjectEntry = ({ title, desc, imgURl, alt, small, to, date }) => {
   const img = <img className="entry__img" src={imgURl} alt={alt} />;
   const className = cx('entry');
   const h2ClassName = cx(
     'entry__h2',
     { 'entry__h2--small': small }
   );
+  const p2ClassName = cx(
+    'entry_p',
+    { 'entry__p--small': small }
+  );
 
   return (
-    <Link to="#">
+    <Link to={to}>
       <div className={className}>
         <Flex valign="center">
           {imgURl ? img : null}
           <div>
-            <Link to="#"><h2 className={h2ClassName}>{title}</h2></Link>
-            <p className="entry__p">{desc}</p>
+            <h2 className={h2ClassName}>{title}</h2>
+            <p className={p2ClassName}>{!small && desc}</p>
           </div>
         </Flex>
       </div>
@@ -29,7 +33,8 @@ const ProjectEntry = ({ title, desc, imgURl, alt, small }) => {
 
 ProjectEntry.defaultProps = {
   title: 'Test Entry',
-  desc: 'This is only a test entry. It should not be viewable on production.'
-}
+  desc: 'This is only a test entry. It should not be viewable on production.',
+  to: 'to',
+};
 
 export default ProjectEntry;

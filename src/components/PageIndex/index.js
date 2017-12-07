@@ -8,7 +8,7 @@ import ProjectEntry from './ProjectEntry';
 
 import './index.scss';
 
-const PageIndex = () => {
+const PageIndex = ({ data }) => {
   return (
     <div className="page-index">
       <Container>
@@ -25,11 +25,16 @@ const PageIndex = () => {
             <div className="page-index__col">
               <h1 className="page-index__h1">Latest Posts</h1>
               <div>
-                <ProjectEntry small />
-                <ProjectEntry small />
-                <ProjectEntry small />
-                <ProjectEntry small />
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <ProjectEntry
+                    title={node.frontmatter.title}
+                    key={node.fields.slug}
+                    to={node.fields.slug}
+                    // date={node.fields.date}
+                    small />
+                ))}
               </div>
+              <p>All Posts</p>
             </div>
           </Flex>
         </Flex>
