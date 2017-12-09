@@ -34,7 +34,7 @@ const ProjectEntry = ({ title, desc, imgURl, alt, small, to, date }) => {
 ProjectEntry.defaultProps = {
   title: 'Test Entry',
   desc: 'This is only a test entry. It should not be viewable on production.',
-  to: 'to',
+  to: '#',
 };
 
 export default ProjectEntry;

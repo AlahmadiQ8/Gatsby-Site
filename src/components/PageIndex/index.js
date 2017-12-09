@@ -24,14 +24,14 @@ const PageIndex = ({ data }) => {
             </div>
             <div className="page-index__col">
               <h1 className="page-index__h1">Latest Posts</h1>
-              <div>
+              <div className="entry__posts">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <ProjectEntry
-                    title={node.frontmatter.title}
+                  <Link className="entry__h2 entry__h2--small"            
                     key={node.fields.slug}
                     to={node.fields.slug}
-                    // date={node.fields.date}
-                    small />
+                  >
+                    {node.frontmatter.title}
+                  </Link>
                 ))}
               </div>
               <p>All Posts</p>
