@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 
 import Flex from '../Flex';
 import Container from '../Container';
+import ButtonLink from '../ButtonLink';
 
 import ProjectEntry from './ProjectEntry';
 
@@ -26,15 +27,17 @@ const PageIndex = ({ data }) => {
               <h1 className="page-index__h1">Latest Posts</h1>
               <div className="entry__posts">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Link className="entry__h2 entry__h2--small"            
+                  <Link className="entry__h2 entry__h2--small"
                     key={node.fields.slug}
                     to={node.fields.slug}
                   >
                     {node.frontmatter.title}
                   </Link>
                 ))}
+                <ButtonLink to="/blog" size="small" width="wide" outline>
+                  All Posts
+                </ButtonLink>
               </div>
-              <p>All Posts</p>
             </div>
           </Flex>
         </Flex>
