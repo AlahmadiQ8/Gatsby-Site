@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
 );
 
 export const pageQuery = graphql`
-query AllBlogPostsPageQuery {
+query RecentBlogPostsPageQuery {
   allMarkdownRemark(
     filter: {id: {regex: "/blog/"}}
     sort: {fields: [fields___date], order: DESC}

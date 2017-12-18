@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import './index.scss';
-import Container from '../Container';
-import Flex from '../Flex';
-import SocialLinks from '../SocialLinks';
+import Container from 'components/Container';
+import Flex from 'components/Flex';
+import SocialLinks from 'components/SocialLinks';
 
+import './index.scss';
 
 const Banner = props => (
   <footer>

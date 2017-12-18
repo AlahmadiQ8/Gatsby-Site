@@ -1,0 +1,82 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+
+.article__container {
+  display: 'flex';
+  min-height: calc(100vh - 60px);
+  @include media-breakpoint-up("sidebar-fixed-min") {
+    max-width: 840;
+    margin-left: 'auto';
+    margin-right: 'auto';
+  }
+}
+
+.article__header {
+  color: map-get($colors, brandLight);
+  margin-bottom: 0;
+  margin-top: 40px;
+  font-weight: normal;
+  font-size: 2.0rem;
+  line-height: 2.2rem;
+  @include media-breakpoint-up(md) {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 80px;
+  }
+}
+
+.article__meta {
+  color: map-get($colors, subtle);
+  color: map-get($grays, "500");
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid map-get($colors, brandLightest);
+  border-bottom: 1px solid map-get($colors, brandLightest);
+  @include media-breakpoint-up(sm) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.article__content {
+  margin-top: 40px; 
+  margin-bottom: 120px;
+  @include media-breakpoint-up(md) {
+    margin-top: 50px;
+  }
+}
+
+.article__sidebar {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-between(sm, "sidebar-fixed-min") {
+    border-left: 1px solid #ececec;
+    margin-left: 80px; 
+  }
+  @include media-breakpoint-between(sm, "sidebar-fixed-lg-min") {
+    flex: 0 0 200px;
+    margin-left: 80px;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 40px;
+  }
+
+  @include media-breakpoint-up("sidebar-fixed-lg-min") {
+    flex: 0 0 300px;
+  }
+
+  @include media-breakpoint-up("sidebar-fixed-min") {
+    position: fixed; 
+    right: 0;
+    width: 300px;
+    z-index: 2;
+  }
+}

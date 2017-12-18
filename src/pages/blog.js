@@ -14,12 +14,6 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            author {
-              frontmatter {
-                name
-                url
-              }
-            }
           }
           fields {
             date(formatString: "MMMM DD, YYYY")

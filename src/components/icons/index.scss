@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+.clock {
+  display: block;
+  circle {
+    fill: map-get($grays, "500");
+  }
+}

@@ -10,7 +10,9 @@ $grid-breakpoints: (
   sm: 600px,
   md: 780px,
   lg: 980px,
-  xl: 1200px
+  xl: 1200px,
+  "sidebar-fixed-min": 2000px,
+  "sidebar-fixed-lg-min": 1100px,
 ) !default;
 
 $colors: (

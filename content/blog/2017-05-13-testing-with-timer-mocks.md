@@ -1,6 +1,5 @@
 ---
 title: Testing Time Sensitive Operations with Jest Timer Mocks
-date: 2017-05-13
 ---
 
 this is an excerp

@@ -1,6 +1,5 @@
 ---
 title: Common Algorithms Written in Javascript (ES6)
-date: 2017-4-12
 tags:
   - javascript
   - algorithms

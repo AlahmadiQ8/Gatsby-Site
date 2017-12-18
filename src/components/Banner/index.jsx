@@ -1,10 +1,9 @@
 import React from 'react';
+
+import Container from 'components/Container';
+import Flex from 'components/Flex';
+import Thumbnail from 'components/Thumbnail';
 import './index.scss';
-
-import Container from '../Container';
-import Flex from '../Flex';
-
-import Thumbnail from '../Thumbnail';
 
 const Banner = () => (
   <div className="banner">
