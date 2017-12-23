@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 
 import 'styles/bootstrap-reboot.css';
 import 'styles/base.scss';
+import 'styles/prism-facebook.scss';
 
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';

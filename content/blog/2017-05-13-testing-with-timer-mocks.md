@@ -2,8 +2,6 @@
 title: Testing Time Sensitive Operations with Jest Timer Mocks
 ---
 
-this is an excerp
-
 ## Introduction
 
 I mostly use Mocha testing framework with Chaijs assertion library.

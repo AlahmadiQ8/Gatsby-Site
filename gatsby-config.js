@@ -26,7 +26,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 840,
+              maxWidth: 800,
             },
           },
           'gatsby-remark-autolink-headers',
@@ -38,6 +38,15 @@ module.exports = {
             },
           },
           'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                danger: 'custom-block-danger',
+                info: 'custom-block-info',
+              },
+            },
+          },
         ],
       },
     },

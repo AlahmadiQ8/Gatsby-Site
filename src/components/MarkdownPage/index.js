@@ -4,7 +4,6 @@ import Container from 'components/Container';
 import Flex from 'components/Flex';
 import Header from './Header';
 import Meta from './Meta';
-// import MarkdownHeader from 'components/MarkdownHeader';
 // import NavigationFooter from 'templates/components/NavigationFooter';
 // import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
 // import TitleAndMetaTags from 'components/TitleAndMetaTags';
@@ -62,24 +61,24 @@ const MarkdownPage = ({
               className="article__meta"
             />
             <div className="article__content">
-              {/* <div
-                css={[sharedStyles.markdown]}
-                dangerouslySetInnerHTML={{__html: markdownRemark.html}}
-              /> */}
+              <div
+                className="article__markdown"
+                dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+              />
             </div>
           </Flex>
-          {/* <div css={sharedStyles.articleLayout.sidebar}>
-            <StickyResponsiveSidebar
+          <div className="article__sidebar">
+            {/* <StickySideBar
               enableScrollSync={enableScrollSync}
               createLink={createLink}
               defaultActiveSection={findSectionForPath(
                 location.pathname,
-                sectionList,
+                sectionList
               )}
               location={location}
               sectionList={sectionList}
-            />
-          </div> */}
+            /> */}
+          </div>
         </div>
       </Container>
     </div>
