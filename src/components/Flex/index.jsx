@@ -11,6 +11,7 @@ const Flex = ({
   shrink = 1,
   type = 'div',
   children,
+  ...rest
 }) => {
   const styles = {
     flexGrow: grow,
@@ -25,6 +26,7 @@ const Flex = ({
     {
       className: `flex ${className}`,
       style: className.match(/flex/) ? {} : styles,
+      ...rest,
     },
     children
   );

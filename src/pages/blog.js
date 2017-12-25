@@ -1,8 +1,21 @@
 import React from 'react';
 
-const Blah = () => {
-  return <div />;
-};
+import Banner from '../components/Banner';
+
+const Blah = () => (
+  <div>
+    <Banner height="small">
+      <div>
+        <h1 className="banner__h1">
+          Blog
+        </h1>
+        <p className="banner__p">
+          I write about web technologies and some random stuff
+        </p>
+      </div>
+    </Banner>
+  </div>
+);
 
 export const pageQuery = graphql`
   query AllBlogPostsPageQuery {

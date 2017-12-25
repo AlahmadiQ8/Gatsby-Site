@@ -12,6 +12,9 @@
 .banner__content-wrapper {
   margin-left: auto;
   margin-right: auto;
+}
+
+.banner__content-wrapper--large {
   padding-top: 45px;
   padding-bottom: 20px; 
   @include media-breakpoint-up(md) {
@@ -21,6 +24,36 @@
   @include media-breakpoint-up(xl) {
     padding-top: 95px;
     padding-bottom: 85px;
+  }
+}
+
+.banner__content-wrapper--medium {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  padding-bottom: 15px; 
+  @include media-breakpoint-up(md) {
+    padding-top: 45px;
+    padding-bottom: 20px; 
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+}
+
+.banner__content-wrapper--small {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  padding-bottom: 10px; 
+  @include media-breakpoint-up(md) {
+    padding-top: 35px;
+    padding-bottom: 15px; 
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
