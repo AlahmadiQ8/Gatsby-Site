@@ -11,3 +11,22 @@
 .align-right {
   text-align: right;
 }
+
+.bg-gray-150 {
+  background-color: map-get($grays, "150");
+}
+.gray-500 {
+  color: map-get($grays, "500");
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-md-row {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

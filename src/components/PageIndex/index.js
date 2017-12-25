@@ -5,7 +5,7 @@ import Flex from '../Flex';
 import Container from '../Container';
 import ButtonLink from '../ButtonLink';
 
-import ProjectEntry from './ProjectEntry';
+import Entry from './Entry';
 
 import './index.scss';
 
@@ -18,9 +18,9 @@ const PageIndex = ({ data }) => {
             <div className="page-index__col">
               <h1 className="page-index__h1">Work</h1>
               <div>
-                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
-                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
-                <ProjectEntry imgURl="http://via.placeholder.com/150x150" />
+                <Entry imgURl="http://via.placeholder.com/150x150" />
+                <Entry imgURl="http://via.placeholder.com/150x150" />
+                <Entry imgURl="http://via.placeholder.com/150x150" />
               </div>
             </div>
             <div className="page-index__col">
@@ -34,7 +34,7 @@ const PageIndex = ({ data }) => {
                     {node.frontmatter.title}
                   </Link>
                 ))}
-                <ButtonLink to="/blog" size="small" width="wide" outline>
+                <ButtonLink to="/blog/all" size="small" width="wide" outline>
                   All Posts
                 </ButtonLink>
               </div>

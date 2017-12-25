@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins/breakpoints';
+@import '../../styles/utils';
 
 $gutter:   25px;
 
@@ -70,7 +71,7 @@ $col-width-2: $width - $col-width-1;
   border: 1px solid map-get($colors, brandLighter);
   background-color: white;
   @include media-breakpoint-up(sm) {
-    padding: 15px;
+    padding: 20px;
   }
 }
 

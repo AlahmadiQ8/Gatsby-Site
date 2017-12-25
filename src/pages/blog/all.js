@@ -1,8 +1,11 @@
 import React from 'react';
 
-import Banner from '../components/Banner';
+import Banner from 'components/Banner';
+import Flex from 'components/Flex';
+import Container from 'components/Container';
+import Entry from 'components/PageIndex/Entry';
 
-const Blah = () => (
+const Blah = ({ data: { allMarkdownRemark: { edges } } }) => (
   <div>
     <Banner height="small">
       <div>
@@ -14,6 +17,23 @@ const Blah = () => (
         </p>
       </div>
     </Banner>
+
+    <div className="page-index" style={{ height: '100%' }}>
+      <Container>
+        <div style={{ maxWidth: '700px' }}>
+          {edges.map(({ node: { frontmatter, fields } }) => (
+            <Entry
+              key={fields.slug}
+              to={fields.slug}
+              title={frontmatter.title}
+              date={fields.date}
+              small
+              >
+            </Entry>
+          ))}
+        </div>
+      </Container>
+    </div>
   </div>
 );
 
