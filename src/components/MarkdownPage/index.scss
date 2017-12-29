@@ -3,7 +3,6 @@
 
 .article__container {
   display: 'flex';
-  min-height: calc(100vh - 60px);
   @include media-breakpoint-up("sidebar-fixed-min") {
     max-width: 840;
     margin-left: 'auto';
@@ -73,9 +72,6 @@
     }
     line-height: 1.7;
     max-width: 42rem;
-    &:first-of-type {
-      // margin-top: 0;
-    }
   }
 
   p > code, & li > code {
@@ -228,6 +224,14 @@
   .custom-block-info {
   background-color: #e3f2fd;
   border-left-color: #b2dbfb;
+  }
+  .custom-block-caption {
+    text-align: center;
+    color: map-get($grays, "600");
+    p {
+      margin-top: 0;
+      font-size: 0.9rem;
+    }
   }
 
   .gatsby-highlight + blockquote {

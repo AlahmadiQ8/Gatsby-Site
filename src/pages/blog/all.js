@@ -9,9 +9,7 @@ const Blah = ({ data: { allMarkdownRemark: { edges } } }) => (
   <div>
     <Banner height="small">
       <div>
-        <h1 className="banner__h1">
-          Blog
-        </h1>
+        <h1 className="banner__h1">Blog</h1>
         <p className="banner__p">
           I write about web technologies and some random stuff
         </p>
@@ -20,7 +18,7 @@ const Blah = ({ data: { allMarkdownRemark: { edges } } }) => (
 
     <div className="page-index" style={{ height: '100%' }}>
       <Container>
-        <div style={{ maxWidth: '700px' }}>
+        <div style={{ maxWidth: '700px' }} className="margin-auto">
           {edges.map(({ node: { frontmatter, fields } }) => (
             <Entry
               key={fields.slug}
@@ -28,8 +26,7 @@ const Blah = ({ data: { allMarkdownRemark: { edges } } }) => (
               title={frontmatter.title}
               date={fields.date}
               small
-              >
-            </Entry>
+            />
           ))}
         </div>
       </Container>

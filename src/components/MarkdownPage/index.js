@@ -36,39 +36,23 @@ const MarkdownPage = ({
   sectionList,
   titlePostfix = '',
 }) => (
-  <Flex
-    direction="column"
-    grow="1"
-    shrink="0"
-    halign="stretch"
-    style={{
-      width: '100%',
-      flex: '1 0 auto',
-      position: 'relative',
-      zIndex: 0,
-    }}
-  >
-    <div style={{ flex: '1 0 auto' }}>
-      <Container>
-        <div className="article__container">
-          <Flex type="article" direction="column" grow="1" halign="stretch">
-            <Header
-              title={markdownRemark.frontmatter.title}
-              className="article__header"
-            />
-            <Meta
-              date={date}
-              className="article__meta"
-            />
-            <div className="article__content">
-              <div
-                className="article__markdown"
-                dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-              />
-            </div>
-          </Flex>
-          <div className="article__sidebar">
-            {/* <StickySideBar
+  <Container>
+    <div className="article__container">
+      <Flex type="article" direction="column" grow="1" halign="stretch">
+        <Header
+          title={markdownRemark.frontmatter.title}
+          className="article__header margin-auto"
+        />
+        <div className="article__content margin-auto">
+          <Meta date={date} className="article__meta" />
+          <div
+            className="article__markdown"
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          />
+        </div>
+      </Flex>
+      <div className="article__sidebar">
+        {/* <StickySideBar
               enableScrollSync={enableScrollSync}
               createLink={createLink}
               defaultActiveSection={findSectionForPath(
@@ -78,11 +62,9 @@ const MarkdownPage = ({
               location={location}
               sectionList={sectionList}
             /> */}
-          </div>
-        </div>
-      </Container>
+      </div>
     </div>
-  </Flex>
+  </Container>
 );
 
 export default MarkdownPage;

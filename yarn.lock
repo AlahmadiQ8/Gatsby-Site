@@ -366,6 +366,17 @@ autoprefixer@^6.0.2, autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
+autoprefixer@^7.2.3:
+  version "7.2.3"
+  resolved "https://registry.npmjs.org/autoprefixer/-/autoprefixer-7.2.3.tgz#c2841e38b7940c2d0a9bbffd72c75f33637854f8"
+  dependencies:
+    browserslist "^2.10.0"
+    caniuse-lite "^1.0.30000783"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^6.0.14"
+    postcss-value-parser "^3.2.3"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -1561,7 +1572,7 @@ browserslist@^1.0.0, browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7
     caniuse-db "^1.0.30000639"
     electron-to-chromium "^1.2.7"
 
-browserslist@^2.1.2:
+browserslist@^2.1.2, browserslist@^2.10.0:
   version "2.10.0"
   resolved "https://registry.npmjs.org/browserslist/-/browserslist-2.10.0.tgz#bac5ee1cc69ca9d96403ffb8a3abdc5b6aed6346"
   dependencies:
@@ -1702,7 +1713,7 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000784"
   resolved "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000784.tgz#1be95012d9489c7719074f81aee57dbdffe6361b"
 
-caniuse-lite@^1.0.30000780:
+caniuse-lite@^1.0.30000780, caniuse-lite@^1.0.30000783:
   version "1.0.30000784"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000784.tgz#129ced74e9a1280a441880b6cd2bce30ef59e6c0"
 
@@ -3890,23 +3901,22 @@ gatsby-plugin-catch-links@^1.0.13:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-react-helmet@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.8.tgz#1adf87229cd54f11c95bb16b25e3cc5f20fee871"
-  dependencies:
-    babel-runtime "^6.26.0"
-    react-helmet "^5.1.3"
-
-gatsby-plugin-sass@^1.0.13:
+gatsby-plugin-postcss-sass@^1.0.15:
   version "1.0.15"
-  resolved "https://registry.npmjs.org/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.15.tgz#7e1195875a83cad640744702ed381658d5f3e9c5"
+  resolved "https://registry.npmjs.org/gatsby-plugin-postcss-sass/-/gatsby-plugin-postcss-sass-1.0.15.tgz#c351f4628b7de997c4c4152eb6fbaa31b334d027"
   dependencies:
     babel-runtime "^6.26.0"
     extract-text-webpack-plugin "^1.0.1"
     gatsby-1-config-css-modules "^1.0.8"
     node-sass "^4.5.2"
     sass-loader "^4.1.1"
-    webpack "^1.13.3"
+
+gatsby-plugin-react-helmet@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.8.tgz#1adf87229cd54f11c95bb16b25e3cc5f20fee871"
+  dependencies:
+    babel-runtime "^6.26.0"
+    react-helmet "^5.1.3"
 
 gatsby-plugin-sharp@^1.6.24:
   version "1.6.24"

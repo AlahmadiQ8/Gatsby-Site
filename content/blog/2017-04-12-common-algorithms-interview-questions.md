@@ -10,6 +10,9 @@ JS ES6. This will be an open post where I'd regularly update it with more
 code snippets. Some of these are random puzzles I picked up from the internet.
 
 ![](test-image.png)
+[[caption]]
+| This is a caption
+
 ## Selection Sort
 ### A other nest after iommediately
 
