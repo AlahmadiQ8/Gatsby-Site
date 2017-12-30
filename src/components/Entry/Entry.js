@@ -4,6 +4,8 @@ import cx from 'classnames';
 
 import Flex from '../Flex';
 
+import './index.scss';
+
 const ProjectEntry = ({ title, desc, imgURl, alt, small, to, date }) => {
   const img = <img className="entry__img" src={imgURl} alt={alt} />;
   const h2ClassName = cx(

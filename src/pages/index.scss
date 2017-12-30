@@ -1,0 +1,65 @@
+@import '../styles/variables';
+@import '../styles/mixins/breakpoints';
+
+$gutter:   25px;
+
+$width: map-get($grid-breakpoints, xl);
+
+$col-width-1: $width * 0.375;
+$col-width-2: $width - $col-width-1;
+
+.page-index {
+  background-color: map-get($grays, "150");
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.page-index__h1 {
+  color: map-get($colors, brand);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  // border-bottom: 1px solid map-get($colors, brandLighter);
+}
+
+.page-index__flex {
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+.page-index__col {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
+
+  &:first-of-type {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      max-width: $col-width-2;
+    }
+  }
+  &:last-of-type {
+    margin-right: 0;
+    @include media-breakpoint-up(md) {
+      max-width: $col-width-1;
+    }
+  }
+}

@@ -43,7 +43,7 @@ const MarkdownPage = ({
           title={markdownRemark.frontmatter.title}
           className="article__header margin-auto"
         />
-        <div className="article__content margin-auto">
+        <div className="article__content">
           <Meta date={date} className="article__meta" />
           <div
             className="article__markdown"

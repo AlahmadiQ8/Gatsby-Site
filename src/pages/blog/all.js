@@ -3,12 +3,14 @@ import React from 'react';
 import Banner from 'components/Banner';
 import Flex from 'components/Flex';
 import Container from 'components/Container';
-import Entry from 'components/PageIndex/Entry';
+import Entry from 'components/Entry';
+
+import './all.scss';
 
 const Blah = ({ data: { allMarkdownRemark: { edges } } }) => (
   <div>
     <Banner height="small">
-      <div>
+      <div className="margin-auto all__banner">
         <h1 className="banner__h1">Blog</h1>
         <p className="banner__p">
           I write about web technologies and some random stuff

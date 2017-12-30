@@ -41,21 +41,4 @@ export const pageQuery = graphql`
   }
 `;
 
-// allMarkdownRemark(
-//   limit: 10
-//   filter: {id: {regex: "/blog/"}}
-//   sort: {fields: [fields___date], order: DESC}
-// ) {
-//   edges {
-//     node {
-//       frontmatter {
-//         title
-//       }
-//       fields {
-//         slug
-//       }
-//     }
-//   }
-// }
-
 export default Blog;

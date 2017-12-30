@@ -46,6 +46,10 @@
 
 .article__content {
   margin-bottom: 120px;
+  @include media-breakpoint-up(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .article__markdown {
@@ -277,30 +281,30 @@
   }
 }
 
-.article__sidebar {
-  display: flex;
-  flex-direction: column;
-  @include media-breakpoint-between(sm, "sidebar-fixed-min") {
-    border-left: 1px solid #ececec;
-    margin-left: 80px; 
-  }
-  @include media-breakpoint-between(sm, "sidebar-fixed-lg-min") {
-    flex: 0 0 200px;
-    margin-left: 80px;
-  }
+// .article__sidebar {
+//   display: flex;
+//   flex-direction: column;
+//   @include media-breakpoint-between(sm, "sidebar-fixed-min") {
+//     border-left: 1px solid #ececec;
+//     margin-left: 80px; 
+//   }
+//   @include media-breakpoint-between(sm, "sidebar-fixed-lg-min") {
+//     flex: 0 0 200px;
+//     margin-left: 80px;
+//   }
 
-  @include media-breakpoint-between(sm, md) {
-    margin-left: 40px;
-  }
+//   @include media-breakpoint-between(sm, md) {
+//     margin-left: 40px;
+//   }
 
-  @include media-breakpoint-up("sidebar-fixed-lg-min") {
-    flex: 0 0 300px;
-  }
+//   @include media-breakpoint-up("sidebar-fixed-lg-min") {
+//     flex: 0 0 300px;
+//   }
 
-  @include media-breakpoint-up("sidebar-fixed-min") {
-    position: fixed; 
-    right: 0;
-    width: 300px;
-    z-index: 2;
-  }
-}
+//   @include media-breakpoint-up("sidebar-fixed-min") {
+//     position: fixed; 
+//     right: 0;
+//     width: 300px;
+//     z-index: 2;
+//   }
+// }
