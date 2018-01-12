@@ -19,12 +19,13 @@ const IndexPage = ({ data }) => (
       <div className="banner__section">
         <h1 className="banner__h1">Mohammad Alahmadi</h1>
         <p className="banner__p">
-        I’m a front end engineer living in Santa Barbara. I enjoy building
-        stuff with Javascript and React.
+          I'm a software engineer focusing mostly on the front end side of the 
+          web. I enjoy solving problems and making great web experiences for 
+          people.
         </p>
       </div>
     </Banner>
-    <div className="page-index">
+    {/* <div className="page-index">
       <Container>
         <Flex halign="center">
           <Flex className="page-index__flex">
@@ -55,7 +56,7 @@ const IndexPage = ({ data }) => (
           </Flex>
         </Flex>
       </Container>
-    </div>
+    </div> */}
   </div>
 );
 

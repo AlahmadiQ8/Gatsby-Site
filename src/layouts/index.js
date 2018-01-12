@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 const TemplateWrapper = ({ children, location }) => {
   const bgColor = location.pathname.includes('/blog/all') ? 'bg-gray-150' : '';
   return (
-    <div className="root">
+    <div className="root main-background">
       <Helmet
         title="Gatsby Default Starter"
         meta={[

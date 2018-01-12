@@ -15,9 +15,9 @@ const Nav = ({ location }) => (
           <NavLink noFocus to="/">
             <Logo />
           </NavLink>
-          <NavLink isActive={location.pathname.includes('/about')} title="About" to="/about" />
+          {/* <NavLink isActive={location.pathname.includes('/about')} title="About" to="/about" />
           <NavLink isActive={location.pathname.includes('/work')} title="Work" to="/work" />
-          <NavLink isActive={location.pathname.includes('/blog/all')} title="Blog" to="/blog/all" />
+          <NavLink isActive={location.pathname.includes('/blog/all')} title="Blog" to="/blog/all" /> */}
         </div>
         <SocialLinks className="nav__social-link" />
       </div>
