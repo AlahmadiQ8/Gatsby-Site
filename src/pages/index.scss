@@ -8,6 +8,21 @@ $width: map-get($grid-breakpoints, xl);
 $col-width-1: $width * 0.375;
 $col-width-2: $width - $col-width-1;
 
+
+// TODO: This is temporary and needs to be removed
+.banner__content-wrapper--large {
+  padding-top: 45px;
+  padding-bottom: 20px; 
+  @include media-breakpoint-up(md) {
+    padding-top: 100px;
+    padding-bottom: 70px; 
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 175px;
+    padding-bottom: 85px;
+  }
+}
+
 .page-index {
   background-color: map-get($grays, "150");
   padding-top: 20px;
