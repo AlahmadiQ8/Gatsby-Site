@@ -13,10 +13,9 @@ const TemplateWrapper = ({ children, location }) => {
   return (
     <div className="root main-background">
       <Helmet
-        title="Gatsby Default Starter"
+        title="Mohammad Alahmadi"
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: 'Mohammad\'s personal website' },
         ]}
       />
       <div className={`root__body ${bgColor}`}>
